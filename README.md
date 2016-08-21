@@ -121,6 +121,7 @@
 	[root@centos6 ~]# 
 
 >上面列表表头的内容分别是：镜像的名称，描述，星级，是否为官方镜像，是否是自动构建的
+
 ####拉取并查看镜像
 	[root@ad2 ~]# docker pull centos
 	......
@@ -188,8 +189,6 @@
 	2912f5b3981e        darkhuang/phantom198:latest   "node index.js"        3 weeks ago         Exited (137) 25 minutes ago                       prickly_brown      
 	[root@ad2 ~]# docker start  bf55a4fd6e73  ##start 运行/bin/bash的容器
 	bf55a4fd6e73
-
-
 	[root@ad2 ~]# docker ps  ##查看，运行/bin/bash的容器一直在，没有退出
 	CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 	bf55a4fd6e73        centos:latest       "/bin/bash"         4 minutes ago       Up 2 seconds                            mydocker           
@@ -232,11 +231,7 @@ eg:
 
 
 >
-nsenter是访问另一个进程的namespace的方式
-
-nsenter的安装方式
-
-	yum  -y install  util-linux
+nsenter是访问另一个进程的namespace的方式,CentOS中nsenter隶属于util-linux软件包,可以通过yum  -y install  util-linux进行安装
 
 eg:
 
